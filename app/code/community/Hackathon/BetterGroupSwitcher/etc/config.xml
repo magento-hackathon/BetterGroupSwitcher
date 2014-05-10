@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Hackathon_BetterGroupSwitcher>
+            <version>1.0.0</version>
+        </Hackathon_BetterGroupSwitcher>
+    </modules>
+    <global>
+        <models>
+            <hackathon_bettergroupswitcher>
+                <class>Hackathon_BetterGroupSwitcher_Model</class>
+                <resourceModel>hackathon_bettergroupswitcher_resource</resourceModel>
+            </hackathon_bettergroupswitcher>
+            <hackathon_bettergroupswitcher_resource>
+                <class>Hackathon_BetterGroupSwitcher_Model_Resource</class>
+            </hackathon_bettergroupswitcher_resource>
+        </models>
+        <helpers>
+            <hackathon_bettergroupswitcher>
+                <class>Hackathon_BetterGroupSwitcher_Helper</class>
+            </hackathon_bettergroupswitcher>
+        </helpers>
+        <resources>
+            <hackathon_bettergroupswitcher_setup>
+                <setup>
+                    <module>Hackathon_BetterGroupSwitcher</module>
+                </setup>
+            </hackathon_bettergroupswitcher_setup>
+        </resources>
+    </global>
+</config>
