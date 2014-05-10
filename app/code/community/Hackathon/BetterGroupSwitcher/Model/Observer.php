@@ -31,9 +31,12 @@ class Hackathon_BetterGroupSwitcher_Model_Observer
         foreach ($order->getAllItems() as $item) {
             /* @var $item Mage_Sales_Model_Order_Item */
             $product = $item->getProduct();
-            $customerGroupId = $product->getAddToCustomergroup();
-            if ($customerGroupId) {
-                break;
+            if($product instanceof Mage_Catalog_Model_Product) {
+                // be sure, that the product still exists
+                $customerGroupId = $product->getAddToCustomergroup();
+                if ($customerGroupId) {
+                    break;
+                }
             }
         }
 
