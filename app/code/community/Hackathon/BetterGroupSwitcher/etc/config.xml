@@ -28,5 +28,25 @@
                 </setup>
             </hackathon_bettergroupswitcher_setup>
         </resources>
+        <events>
+            <sales_order_save_before>
+                <observers>
+                    <hackathon_bettergroupswitcher>
+                        <type>singleton</type>
+                        <class>Hackathon_BetterGroupSwitcher_Model_Observer</class>
+                        <method>salesOrderSaveBefore</method>
+                    </hackathon_bettergroupswitcher>
+                </observers>
+            </sales_order_save_before>
+            <sales_order_save_after>
+                <observers>
+                    <hackathon_bettergroupswitcher>
+                        <type>singleton</type>
+                        <class>Hackathon_BetterGroupSwitcher_Model_Observer</class>
+                        <method>salesOrderSaveAfter</method>
+                    </hackathon_bettergroupswitcher>
+                </observers>
+            </sales_order_save_after>
+        </events>
     </global>
 </config>
